@@ -25,15 +25,8 @@ header p{margin:5px 0;font-size:1.1em;}
 .nav-menu li{margin:0;}
 .nav-menu a{display:block;padding:14px 20px;color:#ffdd57;font-weight:bold;transition:0.3s;}
 .nav-menu a:hover{background:#065a82;color:#fff;border-radius:6px;}
-
-/* HAMBURGER MENU (MOBILE) */
 .menu-toggle{display:none;text-align:right;padding:10px 20px;color:#ffdd57;font-size:20px;cursor:pointer;}
-@media(max-width:768px){
-  .menu-toggle{display:block;}
-  .nav-menu{flex-direction:column;display:none;width:100%;}
-  .nav-menu li{width:100%;}
-  .nav-menu.active{display:flex;}
-}
+@media(max-width:768px){.menu-toggle{display:block;}.nav-menu{flex-direction:column;display:none;width:100%;}.nav-menu li{width:100%;}.nav-menu.active{display:flex;}}
 
 /* HERO SECTION */
 .hero{background:linear-gradient(135deg,#0a3d62 0%,#065a82 100%);color:white;text-align:center;padding:60px 20px;}
@@ -84,7 +77,6 @@ footer a{color:#ffdd57;margin:0 8px;}
 <p>Access all government services in one portal</p>
 </header>
 
-<!-- HORIZONTAL NAVIGATION WITH HAMBURGER -->
 <div class="menu-toggle"><i class="fas fa-bars"></i></div>
 <nav class="top-nav">
   <ul class="nav-menu">
@@ -103,7 +95,7 @@ footer a{color:#ffdd57;margin:0 8px;}
 <p>Search, register, and manage your government accounts easily</p>
 <a class="cta-btn" href="#services">Explore Services</a>
 <div class="search-box">
-<input type="text" id="searchInput" placeholder="Search service (SSS, PhilHealth, LTO, NBI...)">
+<input type="text" id="searchInput" placeholder="Search service (SSS, PhilHealth, Pag-IBIG, GSIS, PSA, LTO, NBI...)">
 </div>
 </section>
 
@@ -112,14 +104,61 @@ footer a{color:#ffdd57;margin:0 8px;}
 <div class="ad-placeholder">Advertisement Space</div>
 
 <div class="service-grid">
-  <!-- Example Service Card: SSS -->
+  <!-- SSS -->
   <div class="card service">
     <h2><i class="fas fa-user-shield"></i> SSS</h2>
     <p>View contributions, loans, benefits, and register for an SSS account.</p>
     <a class="btn" href="https://member.sss.gov.ph/members/registrationPages/memberE1.jsp" target="_blank"><i class="fas fa-user-plus"></i> Register</a>
     <a class="btn" href="https://member.sss.gov.ph" target="_blank"><i class="fas fa-right-to-bracket"></i> Login</a>
   </div>
-  <!-- Add other service cards here (PhilHealth, Pag-IBIG, GSIS, PSA, LTO, NBI) -->
+
+  <!-- PhilHealth -->
+  <div class="card service">
+    <h2><i class="fas fa-heartbeat"></i> PhilHealth</h2>
+    <p>Check contributions, avail of benefits, and register online.</p>
+    <a class="btn" href="https://www.philhealth.gov.ph/online/" target="_blank"><i class="fas fa-user-plus"></i> Register</a>
+    <a class="btn" href="https://www.membership.philhealth.gov.ph/" target="_blank"><i class="fas fa-right-to-bracket"></i> Login</a>
+  </div>
+
+  <!-- Pag-IBIG -->
+  <div class="card service">
+    <h2><i class="fas fa-building"></i> Pag-IBIG</h2>
+    <p>Manage your contributions, loans, and membership online.</p>
+    <a class="btn" href="https://www.pagibigfund.gov.ph/online-registration/" target="_blank"><i class="fas fa-user-plus"></i> Register</a>
+    <a class="btn" href="https://www.pagibigfund.gov.ph/" target="_blank"><i class="fas fa-right-to-bracket"></i> Login</a>
+  </div>
+
+  <!-- GSIS -->
+  <div class="card service">
+    <h2><i class="fas fa-university"></i> GSIS</h2>
+    <p>Government employees can manage their GSIS account online.</p>
+    <a class="btn" href="https://www.gsis.gov.ph/registration" target="_blank"><i class="fas fa-user-plus"></i> Register</a>
+    <a class="btn" href="https://www.gsis.gov.ph" target="_blank"><i class="fas fa-right-to-bracket"></i> Login</a>
+  </div>
+
+  <!-- PSA -->
+  <div class="card service">
+    <h2><i class="fas fa-id-card"></i> PSA</h2>
+    <p>Request birth, marriage, and other civil registry certificates online.</p>
+    <a class="btn" href="https://www.psa.gov.ph/online-services" target="_blank"><i class="fas fa-user-plus"></i> Register</a>
+    <a class="btn" href="https://www.psa.gov.ph" target="_blank"><i class="fas fa-right-to-bracket"></i> Login</a>
+  </div>
+
+  <!-- LTO -->
+  <div class="card service">
+    <h2><i class="fas fa-car"></i> LTO</h2>
+    <p>Check driver's license, vehicle registration, and other services online.</p>
+    <a class="btn" href="https://www.lto.gov.ph/online-services.html" target="_blank"><i class="fas fa-user-plus"></i> Register</a>
+    <a class="btn" href="https://www.lto.gov.ph/" target="_blank"><i class="fas fa-right-to-bracket"></i> Login</a>
+  </div>
+
+  <!-- NBI -->
+  <div class="card service">
+    <h2><i class="fas fa-user-check"></i> NBI</h2>
+    <p>Apply for NBI clearance and check status online.</p>
+    <a class="btn" href="https://clearance.nbi.gov.ph/" target="_blank"><i class="fas fa-user-plus"></i> Register</a>
+    <a class="btn" href="https://clearance.nbi.gov.ph/" target="_blank"><i class="fas fa-right-to-bracket"></i> Login</a>
+  </div>
 </div>
 
 <div class="ad-placeholder">Advertisement Space</div>
