@@ -279,6 +279,115 @@ function toggleGuide(btn) {
     guide.style.display === "block" ? "none" : "block";
 }
   </script>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile-Friendly Floating Banner Ad</title>
+<style>
+  /* Floating ad container (offscreen initially) */
+  #floatingAd {
+    position: fixed;
+    bottom: 20px;
+    right: -400px; /* Start offscreen */
+    width: 350px;
+    max-width: 90%; /* Responsive for small screens */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: right 0.5s ease, opacity 0.5s ease;
+  }
+
+  /* Banner image */
+  #floatingAd img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Close button */
+  #closeBtn {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 5px 8px;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  /* Text overlay */
+  #floatingAd .ad-text {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  }
+
+  /* Adjust for mobile smaller screens */
+  @media (max-width: 480px) {
+    #floatingAd {
+      width: 90%;
+      right: -100%; /* Start fully offscreen */
+      bottom: 15px;
+    }
+    #floatingAd .ad-text {
+      font-size: 14px;
+      bottom: 8px;
+      left: 10px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Floating Banner Ad -->
+<div id="floatingAd">
+  <button id="closeBtn">&times;</button>
+  <img src="https://via.placeholder.com/350x120.png?text=Your+Banner+Ad" alt="Banner Ad">
+  <div class="ad-text">Special Offer!</div>
+</div>
+
+<script>
+  const floatingAd = document.getElementById('floatingAd');
+  const closeBtn = document.getElementById('closeBtn');
+
+  // Slide in after 2 seconds
+  setTimeout(() => {
+    floatingAd.style.right = '20px';
+  }, 2000);
+
+  // Close button click
+  closeBtn.addEventListener('click', () => {
+    floatingAd.style.opacity = '0';
+    floatingAd.style.right = '-400px'; // Slide out
+    setTimeout(() => {
+      window.location.href = 'https://www.example.com';
+    }, 500);
+  });
+
+  // Click anywhere on the banner (except close) redirects
+  floatingAd.addEventListener('click', (e) => {
+    if (e.target !== closeBtn) {
+      window.location.href = 'https://www.example.com';
+    }
+  });
+</script>
+
+</body>
+</html>
 
 </body>
 </html>
