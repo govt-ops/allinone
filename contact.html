@@ -1,77 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Contact | PhilGov Online Services Portal</title>
-<meta name="description" content="Contact PhilGov Online Services Portal for inquiries or support related to government online services.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
-body{margin:0;font-family:Arial,sans-serif;background:#f4f6f8;color:#333;}
-a{text-decoration:none;}
-ul{list-style:none;margin:0;padding:0;}
-header{background:#0a3d62;color:white;padding:25px 20px;text-align:center;}
-header img{width:60px;margin-bottom:10px;}
-header h1{margin:0;font-size:2em;}
-header p{margin:5px 0;font-size:1.1em;}
-.top-nav{background:#0a3d62;position:sticky;top:0;z-index:1000;}
-.nav-menu{display:flex;justify-content:center;align-items:center;margin:0;padding:0;}
-.nav-menu li{margin:0;}
-.nav-menu a{display:block;padding:14px 20px;color:#ffdd57;font-weight:bold;transition:0.3s;}
-.nav-menu a:hover{background:#065a82;color:#fff;border-radius:6px;}
-.menu-toggle{display:none;text-align:right;padding:10px 20px;color:#ffdd57;font-size:20px;cursor:pointer;}
-@media(max-width:768px){.menu-toggle{display:block;}.nav-menu{flex-direction:column;display:none;width:100%;}.nav-menu li{width:100%;}.nav-menu.active{display:flex;}}
-.container{max-width:900px;margin:auto;padding:30px 20px;}
-h2{color:#0a3d62;text-align:center;margin-bottom:20px;}
-p, form{line-height:1.6;}
-form input, form textarea{width:100%;padding:12px;margin-bottom:15px;border-radius:6px;border:1px solid #ccc;font-size:15px;}
-form button{background:#0a3d62;color:white;padding:12px 20px;border:none;border-radius:6px;font-size:16px;cursor:pointer;}
-form button:hover{background:#065a82;}
-footer{background:#222;color:#ccc;text-align:center;padding:20px;font-size:14px;line-height:1.6;}
-footer a{color:#ffdd57;margin:0 8px;}
-</style>
+    <meta charset="UTF-8">
+    <title>Philippine Government Online Services | SSS, PhilHealth, Pag-IBIG</title>
+
+    <!-- SEO META -->
+    <meta name="description" content="Access official Philippine government online services including SSS, PhilHealth, and Pag-IBIG. Register, check accounts, and manage benefits online easily.">
+    <meta name="keywords" content="SSS online, PhilHealth member inquiry, Pag-IBIG virtual, government services Philippines">
+    <meta name="author" content="Philippine Government Services Portal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Philippine Government Online Services">
+    <meta property="og:description" content="One portal for SSS, PhilHealth, and Pag-IBIG online services.">
+    <meta property="og:type" content="website">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f8;
+            color: #333;
+        }
+        header {
+            background: #0a3d62;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        header img {
+            width: 60px;
+            margin-bottom: 10px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+        .search-box {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .search-box input {
+            width: 90%;
+            max-width: 500px;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #0a3d62;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 6px 6px 0 0;
+            background: #0a3d62;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .btn i {
+            margin-right: 6px;
+        }
+        .btn:hover {
+            background: #065a82;
+        }
+        footer {
+            background: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 15px;
+            font-size: 13px;
+        }
+        .note {
+            font-size: 13px;
+            color: #777;
+            margin-top: 15px;
+        }
+    </style>
 </head>
+
 <body>
 
 <header>
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Coat_of_arms_of_the_Philippines.svg" alt="Philippine Government Logo">
-<h1>PhilGov Online Services</h1>
-<p>Contact Us</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Coat_of_arms_of_the_Philippines.svg" alt="Philippines Logo">
+    <h1>Philippine Government Online Services</h1>
+    <p>Search • Register • Check Accounts Online</p>
 </header>
 
-<div class="menu-toggle"><i class="fas fa-bars"></i></div>
-<nav class="top-nav">
-  <ul class="nav-menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="privacy-policy.html">Privacy</a></li>
-    <li><a href="terms.html">Terms</a></li>
-    <li><a href="disclaimer.html">Disclaimer</a></li>
-  </ul>
-</nav>
-
 <div class="container">
-<h2>Contact PhilGov Online Services</h2>
-<p>For inquiries or support related to government online services, please fill out the form below:</p>
 
-<form action="#" method="post">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-<button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
-</form>
+    <!-- SEARCH BAR -->
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search government service (e.g. SSS, PhilHealth, Pag-IBIG)">
+    </div>
+
+    <!-- SSS -->
+    <div class="card service">
+        <h2><i class="fas fa-user-shield"></i> Social Security System (SSS)</h2>
+        <p>Check contributions, loans, benefits, and register for an SSS online account.</p>
+        <a class="btn" href="https://member.sss.gov.ph/members/registrationPages/memberE1.jsp" target="_blank">
+            <i class="fas fa-user-plus"></i> Register
+        </a>
+        <a class="btn" href="https://member.sss.gov.ph" target="_blank">
+            <i class="fas fa-right-to-bracket"></i> Login
+        </a>
+    </div>
+
+    <!-- PhilHealth -->
+    <div class="card service">
+        <h2><i class="fas fa-hospital"></i> PhilHealth</h2>
+        <p>Verify membership details and contribution records online.</p>
+        <a class="btn" href="https://memberinquiry.philhealth.gov.ph" target="_blank">
+            <i class="fas fa-search"></i> Check Account
+        </a>
+        <a class="btn" href="https://www.philhealth.gov.ph" target="_blank">
+            <i class="fas fa-globe"></i> Official Site
+        </a>
+    </div>
+
+    <!-- Pag-IBIG -->
+    <div class="card service">
+        <h2><i class="fas fa-home"></i> Pag-IBIG Fund</h2>
+        <p>Register for Virtual Pag-IBIG and manage savings and housing loans.</p>
+        <a class="btn" href="https://www.pagibigfundservices.com/virtualpagibig/" target="_blank">
+            <i class="fas fa-user-plus"></i> Virtual Pag-IBIG
+        </a>
+        <a class="btn" href="https://www.pagibigfund.gov.ph" target="_blank">
+            <i class="fas fa-globe"></i> Official Site
+        </a>
+    </div>
+
+    <p class="note">
+        ⚠️ Disclaimer: This website does not collect personal information. All links redirect to official Philippine government websites.
+    </p>
+
 </div>
 
 <footer>
-© 2025 Philippine Government Online Services Portal | Informational Website Only
+    © 2025 Philippine Government Online Services Portal | For Informational Use Only
 </footer>
 
+<!-- SEARCH SCRIPT -->
 <script>
-const toggleButton = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.nav-menu');
-toggleButton.addEventListener('click', () => { menu.classList.toggle('active'); });
+    const searchInput = document.getElementById("searchInput");
+    const services = document.querySelectorAll(".service");
+
+    searchInput.addEventListener("keyup", function () {
+        let filter = searchInput.value.toLowerCase();
+        services.forEach(service => {
+            let text = service.textContent.toLowerCase();
+            service.style.display = text.includes(filter) ? "block" : "none";
+        });
+    });
 </script>
 
 </body>
