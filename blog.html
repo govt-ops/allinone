@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Blog | PhilGov Online Services Portal</title>
+<meta name="description" content="Read the latest updates, tips, and guides about Philippine government online services including SSS, PhilHealth, Pag-IBIG, GSIS, PSA, LTO, and NBI.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f4f6f8;color:#333;}
+a{text-decoration:none;color:#0a3d62;}
+ul{list-style:none;margin:0;padding:0;}
+header{background:#0a3d62;color:white;padding:25px 20px;text-align:center;}
+header img{width:60px;margin-bottom:10px;}
+header h1{margin:0;font-size:2em;}
+header p{margin:5px 0;font-size:1.1em;}
+.top-nav{background:#0a3d62;position:sticky;top:0;z-index:1000;}
+.nav-menu{display:flex;justify-content:center;align-items:center;margin:0;padding:0;}
+.nav-menu li{margin:0;}
+.nav-menu a{display:block;padding:14px 20px;color:#ffdd57;font-weight:bold;transition:0.3s;}
+.nav-menu a:hover{background:#065a82;color:#fff;border-radius:6px;}
+.menu-toggle{display:none;text-align:right;padding:10px 20px;color:#ffdd57;font-size:20px;cursor:pointer;}
+@media(max-width:768px){.menu-toggle{display:block;}.nav-menu{flex-direction:column;display:none;width:100%;}.nav-menu li{width:100%;}.nav-menu.active{display:flex;}}
+.container{max-width:1100px;margin:auto;padding:30px 20px;}
+h2{color:#0a3d62;text-align:center;margin-bottom:20px;}
+.blog-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:30px;}
+.blog-card{background:#fff;padding:20px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);transition:transform 0.3s;}
+.blog-card:hover{transform:translateY(-5px);}
+.blog-card img{width:100%;border-radius:10px;margin-bottom:15px;}
+.blog-card h3{margin:0 0 10px 0;color:#0a3d62;}
+.blog-card p{font-size:0.95em;margin-bottom:10px;line-height:1.5;}
+.blog-card .btn{display:inline-block;padding:10px 15px;background:#0a3d62;color:white;border-radius:6px;font-size:14px;}
+.blog-card .btn:hover{background:#065a82;}
+.ad-placeholder{background:#eaeaea;text-align:center;padding:20px;margin:20px 0;border-radius:8px;color:#777;font-size:14px;}
+footer{background:#222;color:#ccc;text-align:center;padding:20px;font-size:14px;line-height:1.6;}
+footer a{color:#ffdd57;margin:0 8px;}
+@media(min-width:600px){.blog-grid{grid-template-columns:repeat(2,1fr);}}
+@media(min-width:900px){.blog-grid{grid-template-columns:repeat(3,1fr);}}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Coat_of_arms_of_the_Philippines.svg" alt="Philippine Government Logo">
+<h1>PhilGov Online Services</h1>
+<p>Blog and Updates</p>
+</header>
+
+<div class="menu-toggle"><i class="fas fa-bars"></i></div>
+<nav class="top-nav">
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="privacy-policy.html">Privacy</a></li>
+    <li><a href="terms.html">Terms</a></li>
+    <li><a href="disclaimer.html">Disclaimer</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+<h2>Latest Blog Posts</h2>
+
+<div class="ad-placeholder">Advertisement Space</div>
+
+<div class="blog-grid" id="blogGrid">
+  <!-- Blog cards will be dynamically inserted here -->
+</div>
+
+<div class="ad-placeholder">Advertisement Space</div>
+
+</div>
+
+<footer>
+© 2025 Philippine Government Online Services Portal | Informational Website Only
+</footer>
+
+<script>
+// HAMBURGER MENU
+const toggleButton = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.nav-menu');
+toggleButton.addEventListener('click', () => { menu.classList.toggle('active'); });
+
+// BLOG POSTS DATA
+const blogPosts = [
+  {
+    title: "How to Register and Check SSS Online",
+    img: "https://via.placeholder.com/600x350?text=SSS+Online+Tips",
+    excerpt: "Step-by-step guide on how to register and check your SSS contributions, loans, and benefits online.",
+    link: "blog-post-sss.html"
+  },
+  {
+    title: "Checking PhilHealth Contributions Made Easy",
+    img: "https://via.placeholder.com/600x350?text=PhilHealth+Guide",
+    excerpt: "Complete guide to checking your PhilHealth contributions and membership online securely.",
+    link: "blog-post-philhealth.html"
+  },
+  {
+    title: "Register for Pag-IBIG Virtual Membership",
+    img: "https://via.placeholder.com/600x350?text=PagIBIG+Virtual",
+    excerpt: "Learn how to register for Virtual Pag-IBIG and manage savings and housing loans online.",
+    link: "blog-post-pagibig.html"
+  }
+];
+
+// DYNAMICALLY GENERATE BLOG CARDS
+const blogGrid = document.getElementById('blogGrid');
+blogPosts.forEach(post => {
+  const card = document.createElement('div');
+  card.className = 'blog-card';
+  card.innerHTML = `
+    <img src="${post.img}" alt="${post.title}">
+    <h3>${post.title}</h3>
+    <p>${post.excerpt}</p>
+    <a class="btn" href="${post.link}" target="_blank">Read More</a>
+  `;
+  blogGrid.appendChild(card);
+});
+</script>
+
+</body>
+</html>
