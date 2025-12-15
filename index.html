@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+
 body{font-family:Arial,sans-serif;margin:0;background:#f4f6f8;color:#333;}
 header{background:#0a3d62;color:white;padding:25px;text-align:center;}
 header img{width:60px;margin-bottom:10px;}
@@ -25,6 +26,50 @@ footer a{color:#ffdd57;text-decoration:none;margin:0 8px;}
 .ad-placeholder{background:#eaeaea;text-align:center;padding:20px;margin:20px 0;border-radius:8px;color:#777;font-size:14px;}
 .note{font-size:13px;color:#777;margin-top:15px;}
 @media(max-width:768px){.btn{width:100%;text-align:center;}}
+  .top-nav {
+    background: #065a82;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.top-nav li {
+    margin: 0;
+}
+
+.top-nav a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.top-nav a:hover {
+    background: #0a3d62;
+    color: #ffdd57;
+}
+
+@media (max-width: 768px) {
+    .top-nav ul {
+        flex-direction: column;
+    }
+    .top-nav a {
+        padding: 12px;
+    }
+}
 </style>
 </head>
 
