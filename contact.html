@@ -2,101 +2,75 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Contact Us | Philippine Government Online Services</title>
-<meta name="description" content="Contact Philippine Government Online Services portal for inquiries or feedback.">
+<title>Contact | PhilGov Online Services Portal</title>
+<meta name="description" content="Contact the Philippine Government Online Services Portal for inquiries or support.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    margin: 0;
-    line-height: 1.6;
-}
-header {
-    background: #0a3d62;
-    color: white;
-    padding: 25px;
-    text-align: center;
-}
-.container {
-    max-width: 900px;
-    margin: auto;
-    background: white;
-    padding: 25px;
-    border-radius: 8px;
-}
-form input, form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-}
-form button {
-    padding: 12px 20px;
-    background: #0a3d62;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-}
-form button:hover {
-    background: #065a82;
-}
-footer {
-    background: #222;
-    color: #ccc;
-    text-align: center;
-    padding: 15px;
-    font-size: 13px;
-}
-a { color: #0a3d62; }
+body{margin:0;font-family:Arial,sans-serif;background:#f4f6f8;color:#333;}
+header{background:#0a3d62;color:white;padding:25px;text-align:center;}
+header img{width:60px;margin-bottom:10px;}
+header h1{margin:0;font-size:2em;}
+header p{margin:5px 0;font-size:1em;}
+.top-nav{background:#0a3d62;overflow:hidden;position:sticky;top:0;z-index:1000;}
+.top-nav ul{display:flex;flex-wrap:wrap;justify-content:center;margin:0;padding:0;}
+.top-nav li{margin:0;}
+.top-nav a{display:block;color:#ffdd57;padding:14px 20px;font-weight:bold;transition:0.3s;}
+.top-nav a:hover{background:#065a82;color:#fff;}
+.container{max-width:900px;margin:auto;padding:30px 20px;}
+h2{color:#0a3d62;text-align:center;margin-bottom:20px;}
+form{display:flex;flex-direction:column;}
+form input, form textarea{padding:12px;margin-bottom:15px;border-radius:6px;border:1px solid #ccc;font-size:1em;}
+form button{background:#0a3d62;color:white;padding:15px;border:none;border-radius:6px;font-size:16px;cursor:pointer;transition:0.3s;}
+form button:hover{background:#065a82;}
+.ad-placeholder{background:#eaeaea;text-align:center;padding:20px;margin:20px 0;border-radius:8px;color:#777;font-size:14px;}
+footer{background:#0a3d62;color:#fff;text-align:center;padding:20px;font-size:14px;line-height:1.6;}
+footer a{color:#ffdd57;margin:0 8px;}
+@media(max-width:768px){.top-nav ul{flex-direction:column;}}
 </style>
 </head>
-
 <body>
 
 <header>
-<h1>Contact Us</h1>
-<p>Philippine Government Online Services</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Coat_of_arms_of_the_Philippines.svg" alt="Philippine Government Logo">
+<h1>PhilGov Online Services</h1>
+<p>Access all government services in one portal</p>
 </header>
 
+<nav class="top-nav">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="privacy-policy.html">Privacy</a></li>
+<li><a href="terms.html">Terms</a></li>
+<li><a href="disclaimer.html">Disclaimer</a></li>
+</ul>
+</nav>
+
 <div class="container">
+<h2>Contact Us</h2>
+<div class="ad-placeholder">Advertisement Space</div>
+<p>If you have questions or need support, feel free to reach out using the form below. We aim to respond promptly.</p>
 
-<p>If you have questions, suggestions, or feedback, please use the form below:</p>
-
-<form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" rows="6" required></textarea>
-
-    <button type="submit">Send Message</button>
+<form action="#" method="post">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+<button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
 </form>
-
-<p><a href="index.html">← Back to Home</a></p>
-
 </div>
 
-<footer style="background:#0a3d62; color:#ffffff; text-align:center; padding:20px; font-size:14px; line-height:1.6;">
-  <p>
-    © 2025 Philippine Government Online Services Portal
-  </p>
-  <p>
-    <a href="about.html" style="color:#ffdd57; text-decoration:none; margin:0 8px;">About</a> |
-    <a href="contact.html" style="color:#ffdd57; text-decoration:none; margin:0 8px;">Contact</a> |
-    <a href="faq.html" style="color:#ffdd57; text-decoration:none; margin:0 8px;">FAQ</a> |
-    <a href="privacy-policy.html" style="color:#ffdd57; text-decoration:none; margin:0 8px;">Privacy Policy</a> |
-    <a href="terms.html" style="color:#ffdd57; text-decoration:none; margin:0 8px;">Terms</a> |
-    <a href="disclaimer.html" style="color:#ffdd57; text-decoration:none; margin:0 8px;">Disclaimer</a>
-  </p>
+<footer>
+© 2025 Philippine Government Online Services Portal |
+<a href="about.html">About</a> |
+<a href="contact.html">Contact</a> |
+<a href="faq.html">FAQ</a> |
+<a href="privacy-policy.html">Privacy</a> |
+<a href="terms.html">Terms</a> |
+<a href="disclaimer.html">Disclaimer</a>
 </footer>
 
 </body>
