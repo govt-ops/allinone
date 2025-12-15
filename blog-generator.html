@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Blog Post Generator | PhilGov Portal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{font-family:Arial,sans-serif;background:#f4f6f8;margin:0;padding:20px;}
+h1{color:#0a3d62;text-align:center;}
+label{display:block;margin-top:15px;font-weight:bold;}
+input,textarea{width:100%;padding:10px;margin-top:5px;border-radius:6px;border:1px solid #ccc;}
+button{margin-top:20px;padding:12px 20px;background:#0a3d62;color:white;border:none;border-radius:6px;font-size:16px;cursor:pointer;}
+button:hover{background:#065a82;}
+textarea{resize:vertical;height:200px;}
+.output{background:#fff;padding:20px;margin-top:20px;border-radius:10px;box-shadow:0 3px 10px rgba(0,0,0,0.1);}
+</style>
+</head>
+<body>
+
+<h1>PhilGov Blog Post Generator</h1>
+
+<label>Post Title:</label>
+<input type="text" id="postTitle" placeholder="E.g. How to Register SSS Online">
+
+<label>Post Excerpt:</label>
+<textarea id="postExcerpt" placeholder="Short summary for blog grid"></textarea>
+
+<label>Post Image URL:</label>
+<input type="text" id="postImage" placeholder="E.g. https://via.placeholder.com/600x350">
+
+<label>Post Content (HTML allowed):</label>
+<textarea id="postContent" placeholder="Full post content here..."></textarea>
+
+<label>File Name (for HTML file, no spaces):</label>
+<input type="text" id="fileName" placeholder="E.g. blog-post-sss.html">
+
+<button id="generateBtn">Generate Blog Post</button>
+
+<div class="output" id="output"></div>
+
+<script>
+document.getElementById('generateBtn').addEventListener('click',()=>{
+  const title = document.getElementById('postTitle').value.trim();
+  const excerpt = document.getElementById('postExcerpt').value.trim();
+  const img = document.getElementById('postImage').value.trim();
+  const content = document.getElementById('postContent').value.trim();
+  const fileName = document.getElementById('fileName').value.trim();
+
+  if(!title||!excerpt||!img||!content||!fileName){
+    alert("Please fill all fields!");
+    return;
+  }
+
+  const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>${title} | PhilGov Blog</title>
+<meta name="description" content="${excerpt}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f4f6f8;color:#333;}
+header,footer{background:#0a3d62;color:white;text-align:center;padding:25px;}
+header img{width:60px;margin-bottom:10px;}
+.container{max-width:900px;margin:auto;padding:30px 20px;background:#fff;border-radius:10px;margin-top:20px;}
+h2{color:#0a3d62;text-align:center;margin-bottom:20px;}
+p{line-height:1.6;margin-bottom:15px;}
+img{max-width:100%;border-radius:10px;margin-bottom:15px;}
+footer{background:#222;color:#ccc;padding:20px;font-size:14px;}
+a{color:#0a3d62;}
+</style>
+</head>
+<body>
+
+<header>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Coat_of_arms_of_the_Philippines.svg" alt="Philippine Government Logo">
+<h1>PhilGov Blog</h1>
+<p>${title}</p>
+</header>
+
+<div class="container">
+<h2>${title}</h2>
+<img src="${img}" alt="${title}">
+${content}
+</div>
+
+<footer>
+© 2025 Philippine Government Online Services Portal | Informational Website Only
+</footer>
+
+</body>
+</html>`;
+
+  const blogEntry = `
+{
+    title:"${title}",
+    img:"${img}",
+    excerpt:"${excerpt}",
+    link:"${fileName}"
+},`;
+
+  document.getElementById('output').innerHTML = `
+<h3>✅ Generated HTML:</h3>
+<textarea style="width:100%;height:300px;">${html}</textarea>
+<h3>✅ Blog Entry for blog.html:</h3>
+<textarea style="width:100%;height:100px;">${blogEntry}</textarea>
+<p>Copy the HTML into a new file named <strong>${fileName}</strong> and append the Blog Entry to your <strong>blogPosts</strong> array in blog.html.</p>
+`;
+});
+</script>
+
+</body>
+</html>
