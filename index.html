@@ -9,6 +9,38 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+  .grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:15px;
+  margin-top:15px;
+}
+
+.quick-btn{
+  background:#0a3d62;
+  color:white;
+  padding:15px;
+  text-align:center;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+.quick-btn i{
+  display:block;
+  font-size:22px;
+  margin-bottom:6px;
+}
+
+.accordion{
+  display:none;
+  margin-top:10px;
+}
+
+.btn.outline{
+  background:none;
+  color:#0a3d62;
+  border:2px solid #0a3d62;
+}
 body{font-family:Arial,sans-serif;margin:0;background:#f4f6f8;color:#333;}
 header{background:#0a3d62;color:white;padding:25px;text-align:center;}
 header img{width:60px;margin-bottom:10px;}
@@ -154,6 +186,7 @@ footer{background:#222;color:#ccc;text-align:center;padding:15px;font-size:13px;
     <a href="disclaimer.html" style="color:#ffdd57; text-decoration:none; margin:0 8px;">Disclaimer</a>
   </p>
 </footer>
+  
 
 <script>
 const searchInput=document.getElementById("searchInput");
@@ -165,5 +198,13 @@ service.style.display=service.textContent.toLowerCase().includes(filter)?"block"
 });
 });
 </script>
+  <script>
+function toggleAccordion(header){
+  const content = header.nextElementSibling;
+  content.style.display =
+    content.style.display === "block" ? "none" : "block";
+}
+  </script>
+
 </body>
 </html>
