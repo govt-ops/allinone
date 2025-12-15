@@ -1,172 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Philippine Government Online Services | SSS, PhilHealth, Pag-IBIG</title>
+<meta charset="UTF-8">
+<title>Philippine Government Online Services | SSS, PhilHealth, Pag-IBIG, GSIS, PSA, LTO, NBI</title>
+<meta name="description" content="Access SSS, PhilHealth, Pag-IBIG, GSIS, PSA, LTO, NBI online services in one portal. Register, check accounts, and manage benefits.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO META -->
-    <meta name="description" content="Access official Philippine government online services including SSS, PhilHealth, and Pag-IBIG. Register, check accounts, and manage benefits online easily.">
-    <meta name="keywords" content="SSS online, PhilHealth member inquiry, Pag-IBIG virtual, government services Philippines">
-    <meta name="author" content="Philippine Government Services Portal">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Philippine Government Online Services">
-    <meta property="og:description" content="One portal for SSS, PhilHealth, and Pag-IBIG online services.">
-    <meta property="og:type" content="website">
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f6f8;
-            color: #333;
-        }
-        header {
-            background: #0a3d62;
-            color: white;
-            padding: 25px;
-            text-align: center;
-        }
-        header img {
-            width: 60px;
-            margin-bottom: 10px;
-        }
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 20px;
-        }
-        .search-box {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .search-box input {
-            width: 90%;
-            max-width: 500px;
-            padding: 12px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            font-size: 16px;
-        }
-        .card {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-        }
-        .card h2 {
-            margin-top: 0;
-            color: #0a3d62;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 15px;
-            margin: 6px 6px 0 0;
-            background: #0a3d62;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 14px;
-        }
-        .btn i {
-            margin-right: 6px;
-        }
-        .btn:hover {
-            background: #065a82;
-        }
-        footer {
-            background: #222;
-            color: #ccc;
-            text-align: center;
-            padding: 15px;
-            font-size: 13px;
-        }
-        .note {
-            font-size: 13px;
-            color: #777;
-            margin-top: 15px;
-        }
-    </style>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f4f6f8;color:#333;}
+header{background:#0a3d62;color:white;padding:25px;text-align:center;}
+header img{width:60px;margin-bottom:10px;}
+.container{max-width:1100px;margin:auto;padding:20px;}
+.search-box{text-align:center;margin-bottom:20px;}
+.search-box input{width:90%;max-width:500px;padding:12px;border-radius:6px;border:1px solid #ccc;font-size:16px;}
+.card{background:#fff;padding:20px;margin-bottom:20px;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,0.1);}
+.card h2{margin-top:0;color:#0a3d62;}
+.btn{display:inline-block;padding:10px 15px;margin:6px 6px 0 0;background:#0a3d62;color:white;text-decoration:none;border-radius:6px;font-size:14px;}
+.btn i{margin-right:6px;}
+.btn:hover{background:#065a82;}
+footer{background:#0a3d62;color:#ffffff;text-align:center;padding:20px;font-size:14px;line-height:1.6;}
+footer a{color:#ffdd57;text-decoration:none;margin:0 8px;}
+.ad-placeholder{background:#eaeaea;text-align:center;padding:20px;margin:20px 0;border-radius:8px;color:#777;font-size:14px;}
+.note{font-size:13px;color:#777;margin-top:15px;}
+@media(max-width:768px){.btn{width:100%;text-align:center;}}
+</style>
 </head>
 
 <body>
 
 <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Coat_of_arms_of_the_Philippines.svg" alt="Philippines Logo">
-    <h1>Philippine Government Online Services</h1>
-    <p>Search • Register • Check Accounts Online</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Coat_of_arms_of_the_Philippines.svg" alt="Philippine Government Logo">
+<h1>Philippine Government Online Services</h1>
+<p>Search • Register • Book Appointments • Check Accounts</p>
 </header>
 
 <div class="container">
 
-    <!-- SEARCH BAR -->
-    <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Search government service (e.g. SSS, PhilHealth, Pag-IBIG)">
-    </div>
+<!-- AD PLACEHOLDER -->
+<div class="ad-placeholder">Advertisement Space</div>
 
-    <!-- SSS -->
-    <div class="card service">
-        <h2><i class="fas fa-user-shield"></i> Social Security System (SSS)</h2>
-        <p>Check contributions, loans, benefits, and register for an SSS online account.</p>
-        <a class="btn" href="https://member.sss.gov.ph/members/registrationPages/memberE1.jsp" target="_blank">
-            <i class="fas fa-user-plus"></i> Register
-        </a>
-        <a class="btn" href="https://member.sss.gov.ph" target="_blank">
-            <i class="fas fa-right-to-bracket"></i> Login
-        </a>
-    </div>
+<!-- SEARCH BAR -->
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Search service (SSS, PhilHealth, LTO, NBI...)">
+</div>
 
-    <!-- PhilHealth -->
-    <div class="card service">
-        <h2><i class="fas fa-hospital"></i> PhilHealth</h2>
-        <p>Verify membership details and contribution records online.</p>
-        <a class="btn" href="https://memberinquiry.philhealth.gov.ph" target="_blank">
-            <i class="fas fa-search"></i> Check Account
-        </a>
-        <a class="btn" href="https://www.philhealth.gov.ph" target="_blank">
-            <i class="fas fa-globe"></i> Official Site
-        </a>
-    </div>
+<!-- SERVICE CARDS -->
+<div class="card service">
+<h2><i class="fas fa-user-shield"></i> Social Security System (SSS)</h2>
+<p>View contributions, loans, benefits, and register for an SSS account.</p>
+<a class="btn" href="https://member.sss.gov.ph/members/registrationPages/memberE1.jsp" target="_blank"><i class="fas fa-user-plus"></i> Register</a>
+<a class="btn" href="https://member.sss.gov.ph" target="_blank"><i class="fas fa-right-to-bracket"></i> Login</a>
+</div>
 
-    <!-- Pag-IBIG -->
-    <div class="card service">
-        <h2><i class="fas fa-home"></i> Pag-IBIG Fund</h2>
-        <p>Register for Virtual Pag-IBIG and manage savings and housing loans.</p>
-        <a class="btn" href="https://www.pagibigfundservices.com/virtualpagibig/" target="_blank">
-            <i class="fas fa-user-plus"></i> Virtual Pag-IBIG
-        </a>
-        <a class="btn" href="https://www.pagibigfund.gov.ph" target="_blank">
-            <i class="fas fa-globe"></i> Official Site
-        </a>
-    </div>
+<div class="card service">
+<h2><i class="fas fa-hospital"></i> PhilHealth</h2>
+<p>Check PhilHealth membership and contribution records online.</p>
+<a class="btn" href="https://memberinquiry.philhealth.gov.ph" target="_blank"><i class="fas fa-search"></i> Check Account</a>
+<a class="btn" href="https://www.philhealth.gov.ph" target="_blank"><i class="fas fa-globe"></i> Official Site</a>
+</div>
 
-    <p class="note">
-        ⚠️ Disclaimer: This website does not collect personal information. All links redirect to official Philippine government websites.
-    </p>
+<div class="card service">
+<h2><i class="fas fa-home"></i> Pag-IBIG Fund</h2>
+<p>Register for Virtual Pag-IBIG and manage savings and housing loans.</p>
+<a class="btn" href="https://www.pagibigfundservices.com/virtualpagibig/" target="_blank"><i class="fas fa-user-plus"></i> Virtual Pag-IBIG</a>
+<a class="btn" href="https://www.pagibigfund.gov.ph" target="_blank"><i class="fas fa-globe"></i> Official Site</a>
+</div>
+
+<div class="card service">
+<h2><i class="fas fa-building-columns"></i> GSIS</h2>
+<p>Access GSIS member services, loans, and benefits online.</p>
+<a class="btn" href="https://www.gsis.gov.ph/active-members/" target="_blank"><i class="fas fa-user"></i> Member Services</a>
+<a class="btn" href="https://www.gsis.gov.ph" target="_blank"><i class="fas fa-globe"></i> Official Site</a>
+</div>
+
+<div class="card service">
+<h2><i class="fas fa-file-lines"></i> PSA</h2>
+<p>Request birth, marriage, and death certificates online.</p>
+<a class="btn" href="https://psahelpline.ph" target="_blank"><i class="fas fa-file"></i> Request Certificate</a>
+<a class="btn" href="https://www.psa.gov.ph" target="_blank"><i class="fas fa-globe"></i> Official Site</a>
+</div>
+
+<div class="card service">
+<h2><i class="fas fa-car"></i> LTO</h2>
+<p>Apply for driver's license, vehicle registration, and LTMS portal.</p>
+<a class="btn" href="https://portal.lto.gov.ph" target="_blank"><i class="fas fa-id-card"></i> LTMS Portal</a>
+<a class="btn" href="https://lto.gov.ph" target="_blank"><i class="fas fa-globe"></i> Official Site</a>
+</div>
+
+<div class="card service">
+<h2><i class="fas fa-fingerprint"></i> NBI</h2>
+<p>Apply and schedule appointments for NBI clearance online.</p>
+<a class="btn" href="https://clearance.nbi.gov.ph" target="_blank"><i class="fas fa-calendar-check"></i> Apply Clearance</a>
+<a class="btn" href="https://nbi.gov.ph" target="_blank"><i class="fas fa-globe"></i> Official Site</a>
+</div>
+
+<div class="ad-placeholder">Advertisement Space</div>
+
+<p class="note">⚠️ Disclaimer: This website does not collect personal information. All links redirect to official Philippine government websites.</p>
 
 </div>
 
 <footer>
-    © 2025 Philippine Government Online Services Portal | For Informational Use Only
+© 2025 Philippine Government Online Services Portal |
+<a href="about.html">About</a> |
+<a href="contact.html">Contact</a> |
+<a href="faq.html">FAQ</a> |
+<a href="privacy-policy.html">Privacy Policy</a> |
+<a href="terms.html">Terms</a> |
+<a href="disclaimer.html">Disclaimer</a>
 </footer>
 
-<!-- SEARCH SCRIPT -->
 <script>
-    const searchInput = document.getElementById("searchInput");
-    const services = document.querySelectorAll(".service");
+// SEARCH BAR FUNCTION
+const searchInput = document.getElementById("searchInput");
+const services = document.querySelectorAll(".service");
 
-    searchInput.addEventListener("keyup", function () {
-        let filter = searchInput.value.toLowerCase();
-        services.forEach(service => {
-            let text = service.textContent.toLowerCase();
-            service.style.display = text.includes(filter) ? "block" : "none";
-        });
+searchInput.addEventListener("keyup", function() {
+    const filter = searchInput.value.toLowerCase();
+    services.forEach(service => {
+        const text = service.textContent.toLowerCase();
+        service.style.display = text.includes(filter) ? "block" : "none";
     });
+});
 </script>
 
 </body>
