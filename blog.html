@@ -7,13 +7,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-/* Same CSS from previous blog.html */
 body{margin:0;font-family:Arial,sans-serif;background:#f4f6f8;color:#333;}
 a{text-decoration:none;color:#0a3d62;}
 header{background:#0a3d62;color:white;padding:25px;text-align:center;}
 header img{width:60px;margin-bottom:10px;}
 h2{color:#0a3d62;text-align:center;margin-bottom:20px;}
 .container{max-width:1100px;margin:auto;padding:30px 20px;}
+.search-box{text-align:center;margin-bottom:20px;}
+.search-box input{width:90%;max-width:500px;padding:12px;border-radius:6px;border:1px solid #ccc;font-size:16px;}
 .blog-grid{display:grid;grid-template-columns:1fr;gap:20px;}
 .blog-card{background:#fff;padding:20px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);}
 .blog-card img{width:100%;border-radius:10px;margin-bottom:15px;}
@@ -21,6 +22,9 @@ h2{color:#0a3d62;text-align:center;margin-bottom:20px;}
 .blog-card p{font-size:0.95em;margin-bottom:10px;line-height:1.5;}
 .blog-card .btn{display:inline-block;padding:10px 15px;background:#0a3d62;color:white;border-radius:6px;font-size:14px;}
 .blog-card .btn:hover{background:#065a82;}
+.ad-placeholder{background:#eaeaea;text-align:center;padding:20px;margin:20px 0;border-radius:8px;color:#777;font-size:14px;}
+footer{background:#222;color:#ccc;text-align:center;padding:20px;font-size:14px;line-height:1.6;}
+footer a{color:#ffdd57;margin:0 8px;}
 @media(min-width:600px){.blog-grid{grid-template-columns:repeat(2,1fr);}}
 @media(min-width:900px){.blog-grid{grid-template-columns:repeat(3,1fr);}}
 </style>
@@ -34,9 +38,22 @@ h2{color:#0a3d62;text-align:center;margin-bottom:20px;}
 </header>
 
 <div class="container">
-<h2>Latest Blog Posts</h2>
-<div class="blog-grid" id="blogGrid"></div>
+
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Search posts...">
 </div>
+
+<div class="ad-placeholder">Advertisement Space</div>
+
+<div class="blog-grid" id="blogGrid"></div>
+
+<div class="ad-placeholder">Advertisement Space</div>
+
+</div>
+
+<footer>
+© 2025 Philippine Government Online Services Portal | Informational Website Only
+</footer>
 
 <script>
 // List of blog post HTML files
@@ -49,28 +66,52 @@ const posts = [
 ];
 
 const blogGrid = document.getElementById('blogGrid');
+let allPosts = [];
 
-posts.forEach(url => {
-  fetch(url)
-    .then(response => response.text())
-    .then(html => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      const metaScript = doc.getElementById('postMeta');
-      if(metaScript){
-        const meta = JSON.parse(metaScript.textContent);
-        const card = document.createElement('div');
-        card.className = 'blog-card';
-        card.innerHTML = `
-          <img src="${meta.img}" alt="${meta.title}">
-          <h3>${meta.title}</h3>
-          <p>${meta.excerpt}</p>
-          <a class="btn" href="${meta.link}" target="_blank">Read More</a>
-        `;
-        blogGrid.appendChild(card);
-      }
-    });
+// Function to load posts
+async function loadPosts() {
+  for(const url of posts){
+    const response = await fetch(url);
+    const html = await response.text();
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html,'text/html');
+    const metaScript = doc.getElementById('postMeta');
+    if(metaScript){
+      const meta = JSON.parse(metaScript.textContent);
+      allPosts.push(meta);
+    }
+  }
+  renderPosts(allPosts);
+}
+
+// Function to render posts
+function renderPosts(postsArray){
+  blogGrid.innerHTML = '';
+  postsArray.forEach(meta => {
+    const card = document.createElement('div');
+    card.className = 'blog-card';
+    card.innerHTML = `
+      <img src="${meta.img}" alt="${meta.title}">
+      <h3>${meta.title}</h3>
+      <p>${meta.excerpt}</p>
+      <a class="btn" href="${meta.link}" target="_blank">Read More</a>
+    `;
+    blogGrid.appendChild(card);
+  });
+}
+
+// Search functionality
+const searchInput = document.getElementById('searchInput');
+searchInput.addEventListener('keyup', () => {
+  const filter = searchInput.value.toLowerCase();
+  const filtered = allPosts.filter(post => 
+    post.title.toLowerCase().includes(filter) || post.excerpt.toLowerCase().includes(filter)
+  );
+  renderPosts(filtered);
 });
+
+// Load posts on page load
+loadPosts();
 </script>
 
 </body>
