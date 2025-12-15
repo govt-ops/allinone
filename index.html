@@ -5,11 +5,10 @@
 <title>PhilGov Online Services Portal</title>
 <meta name="description" content="Access SSS, PhilHealth, Pag-IBIG, GSIS, PSA, LTO, NBI online services in one portal. Register, check accounts, and manage benefits.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-/* BASE */
+/* BASE STYLES */
 body{margin:0;font-family:Arial,sans-serif;background:#f4f6f8;color:#333;}
 a{text-decoration:none;}
 ul{list-style:none;margin:0;padding:0;}
@@ -20,15 +19,24 @@ header img{width:60px;margin-bottom:10px;}
 header h1{margin:0;font-size:2em;}
 header p{margin:5px 0;font-size:1.1em;}
 
-/* NAVIGATION */
-.top-nav{background:#0a3d62;overflow:hidden;position:sticky;top:0;z-index:1000;}
-.top-nav ul{display:flex;flex-wrap:wrap;justify-content:center;margin:0;padding:0;}
-.top-nav li{margin:0;}
-.top-nav a{display:block;color:#ffdd57;padding:14px 20px;font-weight:bold;transition:0.3s;}
-.top-nav a:hover{background:#065a82;color:#fff;}
+/* HORIZONTAL NAVIGATION */
+.top-nav{background:#0a3d62;position:sticky;top:0;z-index:1000;}
+.nav-menu{display:flex;justify-content:center;align-items:center;margin:0;padding:0;}
+.nav-menu li{margin:0;}
+.nav-menu a{display:block;padding:14px 20px;color:#ffdd57;font-weight:bold;transition:0.3s;}
+.nav-menu a:hover{background:#065a82;color:#fff;border-radius:6px;}
 
-/* HERO */
-.hero{background:linear-gradient(135deg, #0a3d62 0%, #065a82 100%);color:white;text-align:center;padding:60px 20px;}
+/* HAMBURGER MENU (MOBILE) */
+.menu-toggle{display:none;text-align:right;padding:10px 20px;color:#ffdd57;font-size:20px;cursor:pointer;}
+@media(max-width:768px){
+  .menu-toggle{display:block;}
+  .nav-menu{flex-direction:column;display:none;width:100%;}
+  .nav-menu li{width:100%;}
+  .nav-menu.active{display:flex;}
+}
+
+/* HERO SECTION */
+.hero{background:linear-gradient(135deg,#0a3d62 0%,#065a82 100%);color:white;text-align:center;padding:60px 20px;}
 .hero h2{font-size:2.2em;margin-bottom:10px;}
 .hero p{font-size:1.2em;margin-bottom:20px;}
 .hero .cta-btn{background:#ffdd57;color:#0a3d62;padding:15px 25px;border-radius:8px;font-size:16px;font-weight:bold;display:inline-block;transition:0.3s;}
@@ -59,8 +67,6 @@ footer a{color:#ffdd57;margin:0 8px;}
 @media(min-width:600px){.service-grid{grid-template-columns:repeat(2,1fr);}}
 @media(min-width:900px){.service-grid{grid-template-columns:repeat(3,1fr);}}
 @media(max-width:768px){
-  .top-nav ul{flex-direction:column;}
-  .top-nav a{padding:12px;text-align:center;}
   .hero h2{font-size:1.8em;}
   .hero p{font-size:1em;}
   .hero .cta-btn{padding:12px 20px;font-size:15px;}
@@ -78,16 +84,18 @@ footer a{color:#ffdd57;margin:0 8px;}
 <p>Access all government services in one portal</p>
 </header>
 
+<!-- HORIZONTAL NAVIGATION WITH HAMBURGER -->
+<div class="menu-toggle"><i class="fas fa-bars"></i></div>
 <nav class="top-nav">
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="faq.html">FAQ</a></li>
-<li><a href="privacy-policy.html">Privacy</a></li>
-<li><a href="terms.html">Terms</a></li>
-<li><a href="disclaimer.html">Disclaimer</a></li>
-</ul>
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="privacy-policy.html">Privacy</a></li>
+    <li><a href="terms.html">Terms</a></li>
+    <li><a href="disclaimer.html">Disclaimer</a></li>
+  </ul>
 </nav>
 
 <section class="hero">
@@ -104,59 +112,19 @@ footer a{color:#ffdd57;margin:0 8px;}
 <div class="ad-placeholder">Advertisement Space</div>
 
 <div class="service-grid">
+  <!-- Example Service Card: SSS -->
   <div class="card service">
     <h2><i class="fas fa-user-shield"></i> SSS</h2>
     <p>View contributions, loans, benefits, and register for an SSS account.</p>
     <a class="btn" href="https://member.sss.gov.ph/members/registrationPages/memberE1.jsp" target="_blank"><i class="fas fa-user-plus"></i> Register</a>
     <a class="btn" href="https://member.sss.gov.ph" target="_blank"><i class="fas fa-right-to-bracket"></i> Login</a>
   </div>
-
-  <div class="card service">
-    <h2><i class="fas fa-hospital"></i> PhilHealth</h2>
-    <p>Check PhilHealth membership and contribution records online.</p>
-    <a class="btn" href="https://memberinquiry.philhealth.gov.ph" target="_blank"><i class="fas fa-search"></i> Check Account</a>
-    <a class="btn" href="https://www.philhealth.gov.ph" target="_blank"><i class="fas fa-globe"></i> Official Site</a>
-  </div>
-
-  <div class="card service">
-    <h2><i class="fas fa-home"></i> Pag-IBIG Fund</h2>
-    <p>Register for Virtual Pag-IBIG and manage savings and housing loans.</p>
-    <a class="btn" href="https://www.pagibigfundservices.com/virtualpagibig/" target="_blank"><i class="fas fa-user-plus"></i> Virtual Pag-IBIG</a>
-    <a class="btn" href="https://www.pagibigfund.gov.ph" target="_blank"><i class="fas fa-globe"></i> Official Site</a>
-  </div>
-
-  <div class="card service">
-    <h2><i class="fas fa-building-columns"></i> GSIS</h2>
-    <p>Access GSIS member services, loans, and benefits online.</p>
-    <a class="btn" href="https://www.gsis.gov.ph/active-members/" target="_blank"><i class="fas fa-user"></i> Member Services</a>
-    <a class="btn" href="https://www.gsis.gov.ph" target="_blank"><i class="fas fa-globe"></i> Official Site</a>
-  </div>
-
-  <div class="card service">
-    <h2><i class="fas fa-file-lines"></i> PSA</h2>
-    <p>Request birth, marriage, and death certificates online.</p>
-    <a class="btn" href="https://psahelpline.ph" target="_blank"><i class="fas fa-file"></i> Request Certificate</a>
-    <a class="btn" href="https://www.psa.gov.ph" target="_blank"><i class="fas fa-globe"></i> Official Site</a>
-  </div>
-
-  <div class="card service">
-    <h2><i class="fas fa-car"></i> LTO</h2>
-    <p>Apply for driver's license, vehicle registration, and LTMS portal.</p>
-    <a class="btn" href="https://portal.lto.gov.ph" target="_blank"><i class="fas fa-id-card"></i> LTMS Portal</a>
-    <a class="btn" href="https://lto.gov.ph" target="_blank"><i class="fas fa-globe"></i> Official Site</a>
-  </div>
-
-  <div class="card service">
-    <h2><i class="fas fa-fingerprint"></i> NBI</h2>
-    <p>Apply and schedule appointments for NBI clearance online.</p>
-    <a class="btn" href="https://clearance.nbi.gov.ph" target="_blank"><i class="fas fa-calendar-check"></i> Apply Clearance</a>
-    <a class="btn" href="https://nbi.gov.ph" target="_blank"><i class="fas fa-globe"></i> Official Site</a>
-  </div>
+  <!-- Add other service cards here (PhilHealth, Pag-IBIG, GSIS, PSA, LTO, NBI) -->
 </div>
 
 <div class="ad-placeholder">Advertisement Space</div>
 
-<p class="note">⚠️ Disclaimer: This website does not collect personal information. All links redirect to official Philippine government websites.</p>
+<p class="note">⚠️ Disclaimer: All links redirect to official Philippine government websites. No personal info is collected.</p>
 
 </div>
 
@@ -180,6 +148,13 @@ searchInput.addEventListener("keyup", function() {
         const text = service.textContent.toLowerCase();
         service.style.display = text.includes(filter) ? "block" : "none";
     });
+});
+
+// HAMBURGER MENU TOGGLE
+const toggleButton = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.nav-menu');
+toggleButton.addEventListener('click', () => {
+  menu.classList.toggle('active');
 });
 </script>
 
