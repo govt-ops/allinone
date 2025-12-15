@@ -7,27 +7,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-/* Same styling as blog.html */
+/* Same CSS as blog.html */
 body{margin:0;font-family:Arial,sans-serif;background:#f4f6f8;color:#333;}
-a{text-decoration:none;color:#0a3d62;}
-ul{list-style:none;margin:0;padding:0;}
-header{background:#0a3d62;color:white;padding:25px 20px;text-align:center;}
+header,footer{background:#0a3d62;color:white;text-align:center;padding:25px;}
 header img{width:60px;margin-bottom:10px;}
-header h1{margin:0;font-size:2em;}
-header p{margin:5px 0;font-size:1.1em;}
-.top-nav{background:#0a3d62;position:sticky;top:0;z-index:1000;}
-.nav-menu{display:flex;justify-content:center;align-items:center;margin:0;padding:0;}
-.nav-menu li{margin:0;}
-.nav-menu a{display:block;padding:14px 20px;color:#ffdd57;font-weight:bold;transition:0.3s;}
-.nav-menu a:hover{background:#065a82;color:#fff;border-radius:6px;}
-.menu-toggle{display:none;text-align:right;padding:10px 20px;color:#ffdd57;font-size:20px;cursor:pointer;}
-@media(max-width:768px){.menu-toggle{display:block;}.nav-menu{flex-direction:column;display:none;width:100%;}.nav-menu li{width:100%;}.nav-menu.active{display:flex;}}
-.container{max-width:900px;margin:auto;padding:30px 20px;}
+.container{max-width:900px;margin:auto;padding:30px 20px;background:#fff;border-radius:10px;margin-top:20px;}
 h2{color:#0a3d62;text-align:center;margin-bottom:20px;}
 p{line-height:1.6;margin-bottom:15px;}
-footer{background:#222;color:#ccc;text-align:center;padding:20px;font-size:14px;line-height:1.6;}
-footer a{color:#ffdd57;margin:0 8px;}
 img{max-width:100%;border-radius:10px;margin-bottom:15px;}
+footer{background:#222;color:#ccc;padding:20px;font-size:14px;}
+a{color:#0a3d62;}
 </style>
 </head>
 <body>
@@ -38,36 +27,18 @@ img{max-width:100%;border-radius:10px;margin-bottom:15px;}
 <p>How to Register and Check SSS Online</p>
 </header>
 
-<div class="menu-toggle"><i class="fas fa-bars"></i></div>
-<nav class="top-nav">
-  <ul class="nav-menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="privacy-policy.html">Privacy</a></li>
-    <li><a href="terms.html">Terms</a></li>
-    <li><a href="disclaimer.html">Disclaimer</a></li>
-  </ul>
-</nav>
-
 <div class="container">
 <h2>How to Register and Check SSS Online</h2>
 <img src="https://via.placeholder.com/800x400?text=SSS+Online+Guide" alt="SSS Online Guide">
-<p>Step-by-step instructions...</p>
-<p>More detailed content goes here. Add images, tips, or official links for better SEO and user engagement.</p>
+<p>Step 1: Visit the official SSS website...</p>
+<p>Step 2: Fill out your details to register or login...</p>
+<p>Step 3: Check contributions, benefits, and loans online.</p>
+<p>Include official links and tips to make the process smoother.</p>
 </div>
 
 <footer>
 © 2025 Philippine Government Online Services Portal | Informational Website Only
 </footer>
-
-<script>
-const toggleButton = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.nav-menu');
-toggleButton.addEventListener('click', () => { menu.classList.toggle('active'); });
-</script>
 
 </body>
 </html>
