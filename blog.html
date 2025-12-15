@@ -66,12 +66,9 @@ footer a{color:#ffdd57;margin:0 8px;}
 
 <div class="ad-placeholder">Advertisement Space</div>
 
-<div class="blog-grid" id="blogGrid">
-  <!-- Blog cards will be dynamically inserted here -->
-</div>
+<div class="blog-grid" id="blogGrid"></div>
 
 <div class="ad-placeholder">Advertisement Space</div>
-
 </div>
 
 <footer>
@@ -79,34 +76,43 @@ footer a{color:#ffdd57;margin:0 8px;}
 </footer>
 
 <script>
-// HAMBURGER MENU
 const toggleButton = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.nav-menu');
 toggleButton.addEventListener('click', () => { menu.classList.toggle('active'); });
 
-// BLOG POSTS DATA
 const blogPosts = [
   {
-    title: "How to Register and Check SSS Online",
-    img: "https://via.placeholder.com/600x350?text=SSS+Online+Tips",
-    excerpt: "Step-by-step guide on how to register and check your SSS contributions, loans, and benefits online.",
-    link: "blog-post-sss.html"
+    title:"How to Register and Check SSS Online",
+    img:"https://via.placeholder.com/600x350?text=SSS+Online+Tips",
+    excerpt:"Step-by-step guide on registering and checking SSS contributions, loans, and benefits online.",
+    link:"blog-post-sss.html"
   },
   {
-    title: "Checking PhilHealth Contributions Made Easy",
-    img: "https://via.placeholder.com/600x350?text=PhilHealth+Guide",
-    excerpt: "Complete guide to checking your PhilHealth contributions and membership online securely.",
-    link: "blog-post-philhealth.html"
+    title:"Checking PhilHealth Contributions Made Easy",
+    img:"https://via.placeholder.com/600x350?text=PhilHealth+Guide",
+    excerpt:"Complete guide to checking your PhilHealth contributions and membership online securely.",
+    link:"blog-post-philhealth.html"
   },
   {
-    title: "Register for Pag-IBIG Virtual Membership",
-    img: "https://via.placeholder.com/600x350?text=PagIBIG+Virtual",
-    excerpt: "Learn how to register for Virtual Pag-IBIG and manage savings and housing loans online.",
-    link: "blog-post-pagibig.html"
+    title:"Register for Pag-IBIG Virtual Membership",
+    img:"https://via.placeholder.com/600x350?text=PagIBIG+Virtual",
+    excerpt:"Learn how to register for Virtual Pag-IBIG and manage savings and housing loans online.",
+    link:"blog-post-pagibig.html"
+  },
+  {
+    title:"GSIS Online Services for Government Employees",
+    img:"https://via.placeholder.com/600x350?text=GSIS+Online",
+    excerpt:"How to access GSIS member services, loans, and benefits online efficiently.",
+    link:"blog-post-gsis.html"
+  },
+  {
+    title:"How to Apply for NBI Clearance Online",
+    img:"https://via.placeholder.com/600x350?text=NBI+Clearance",
+    excerpt:"Step-by-step guide to applying and scheduling appointments for NBI clearance online.",
+    link:"blog-post-nbi.html"
   }
 ];
 
-// DYNAMICALLY GENERATE BLOG CARDS
 const blogGrid = document.getElementById('blogGrid');
 blogPosts.forEach(post => {
   const card = document.createElement('div');
